@@ -16,7 +16,7 @@ local Release = "Release 2A"
 local NotificationDuration = 6.5
 local ArrayFieldFolder = "ArrayField"
 local ConfigurationFolder = ArrayFieldFolder.."/Configurations"
-local ConfigurationExtension = ".rfld"
+local ConfigurationExtension = ".ionhubconfig"
 local ArrayFieldQuality = {}
 
 local ArrayFieldLibrary = {
@@ -116,7 +116,7 @@ local CoreGui = game:GetService("CoreGui")
 local LocalPlayer = game:GetService('Players').LocalPlayer
 
 -- Interface Management
-local ArrayField = game:GetObjects("rbxassetid://13853811008")[1]
+
 ArrayField.Enabled = false
 local spawn = task.spawn
 local delay = task.delay
@@ -1190,10 +1190,10 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 	LoadingFrame.Subtitle.TextTransparency = 1
 	Main.Shadow.Image.ImageTransparency = 1
 	LoadingFrame.Version.TextTransparency = 1
-	LoadingFrame.Title.Text = Settings.LoadingTitle or "Arrayfield Interface Suite"
+	LoadingFrame.Title.Text = Settings.LoadingTitle or "Ionfield Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by 0Windycaketi"
-	if Settings.LoadingTitle ~= "Arrayfield Interface Suite" then
-		LoadingFrame.Version.Text = "Arrayfield UI"
+	if Settings.LoadingTitle ~= "Ionfield Interface Suite" then
+		LoadingFrame.Version.Text = "Ionfield UI"
 	end
 	Topbar.Visible = false
 	Elements.Visible = false
@@ -3466,3 +3466,4 @@ function ArrayFieldLibrary:LoadConfiguration()
 end
 task.delay(9, ArrayFieldLibrary.LoadConfiguration, ArrayFieldLibrary)
 return ArrayFieldLibrary
+
